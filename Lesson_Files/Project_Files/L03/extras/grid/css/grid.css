@@ -1,0 +1,68 @@
+
+/* Grid examples */
+
+.section-content-grid {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "heading"
+     "center-content"
+     "sidebar-first"
+     "sidebar-second"
+}
+
+.section-content-grid h1 {
+	grid-area: heading;
+	width: 100%;
+}
+
+.center-content {
+	grid-area: center-content;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.sidebar-first {
+	grid-area: sidebar-first;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.sidebar-second {
+	grid-area: sidebar-second;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+    @media only screen and (min-width: 43.75em)  {
+	    .section-content-grid {
+	
+	        grid-template-columns: 20% auto;
+	        grid-template-areas:
+	    ".......   heading"
+	        "sidebar-first  center-content"
+	        "sidebar-second sidebar-second";
+	    }
+			.center-content {
+				grid-area: center-content;
+				padding-left: 0;
+				padding-right: 0;
+			}
+    }
+
+    @media only screen and (min-width: 56em)   {
+        .section-content-grid {
+      grid-gap: 20px;
+            grid-template-columns: 20% auto 20%;
+            grid-template-areas:
+      ".......  heading  ......."
+            "sidebar-first center-content sidebar-second";
+        }
+        .sidebar-first {
+	        grid-area: sidebar-second;
+        }
+        .sidebar-second {
+	        align-self: end;
+	        grid-area: sidebar-first;
+        }
+    }
+

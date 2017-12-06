@@ -1,0 +1,17 @@
+
+
+.blend-container {
+	width: 100%;
+	background: linear-gradient(#55677B, #35475B), url(../images/tristan_in_the_water_again.jpg) no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+.blend-container img {
+	opacity: 0;
+	-webkit-transition: opacity linear 0.2s;
+	-moz-transition: opacity linear 0.2s;
+    transition: opacity linear 0.2s;
+}
+.blend-container img:hover {
+	opacity: 1;
+}
